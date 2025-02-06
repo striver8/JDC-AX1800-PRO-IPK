@@ -9,6 +9,8 @@ https://github.com/VIKINGYFY/immortalwrt.git
 
 # 固件简要说明：
 
+OpenWrt计划弃用opkg，全面采用apk。这是一个默认使用opkg的固件。
+
 固件每天早上4点自动编译。
 
 固件信息里的时间为编译开始的时间，方便核对上游源码提交时间。
@@ -22,3 +24,4 @@ workflows——自定义CI配置
 Scripts——自定义脚本
 
 Config——自定义配置
+
