@@ -1,3 +1,5 @@
+#OpenWrt计划弃用opkg，全面采用apk。这是一个默认使用opkg的固件。
+
 # OpenWRT-CI
 云编译OpenWRT固件
 
@@ -8,8 +10,6 @@ https://github.com/immortalwrt/immortalwrt.git
 https://github.com/VIKINGYFY/immortalwrt.git
 
 # 固件简要说明：
-
-OpenWrt计划弃用opkg，全面采用apk。这是一个默认使用opkg的固件。
 
 固件每天早上4点自动编译。
 
