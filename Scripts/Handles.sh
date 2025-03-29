@@ -2,6 +2,22 @@
 
 PKG_PATH="$GITHUB_WORKSPACE/wrt/package/"
 
+# -------------------------- 新增精准冲突文件清理 --------------------------
+echo "执行精准冲突文件清理..."
+# 清理openvpn-openssl配置文件
+find "$GITHUB_WORKSPACE/wrt/feeds" -type f -path "*/openvpn-openssl/files/etc/config/openvpn" -delete
+echo "已清除所有openvpn-openssl配置文件"
+
+# 清理socat相关文件
+find "$GITHUB_WORKSPACE/wrt/feeds" -type f \( -path "*/socat/files/etc/config/socat" -o -path "*/socat/files/etc/init.d/socat" \) -delete
+echo "已清除所有socat配置文件"
+
+# 清理残留lock文件
+find "$GITHUB_WORKSPACE/wrt" -name "*.rej" -delete
+find "$GITHUB_WORKSPACE/wrt" -name "*.orig" -delete
+echo "已清除补丁残留文件"
+# -------------------------- 新增结束 --------------------------
+
 #预置HomeProxy数据
 if [ -d *"homeproxy"* ]; then
 	HP_RULE="surge"
@@ -26,10 +42,26 @@ fi
 if [ -d *"luci-theme-argon"* ]; then
 	cd ./luci-theme-argon/
 
-	sed -i '/font-weight:/ {/!important/! s/\(font-weight:\s*\)[^;]*;/\1normal;/}' $(find ./luci-theme-argon -type f -iname "*.css")
-	sed -i "s/primary '.*'/primary '#31a1a1'/; s/'0.2'/'0.5'/; s/'none'/'bing'/" ./luci-app-argon-config/root/etc/config/argon
+	sed -i "/font-weight:/ { /important/! { /\/\*/! s/:.*/: var(--font-weight);/ } }" $(find ./luci-theme-argon -type f -iname "*.css")
+	sed -i "s/primary '.*'/primary '#31a1a1'/; s/'0.2'/'0.5'/; s/'none'/'bing'/; s/'600'/'normal'/" ./luci-app-argon-config/root/etc/config/argon
 
 	cd $PKG_PATH && echo "theme-argon has been fixed!"
+fi
+
+#修改qca-nss-drv启动顺序
+NSS_DRV="../feeds/nss_packages/qca-nss-drv/files/qca-nss-drv.init"
+if [ -f "$NSS_DRV" ]; then
+	sed -i 's/START=.*/START=85/g' $NSS_DRV
+
+	cd $PKG_PATH && echo "qca-nss-drv has been fixed!"
+fi
+
+#修改qca-nss-pbuf启动顺序
+NSS_PBUF="./kernel/mac80211/files/qca-nss-pbuf.init"
+if [ -f "$NSS_PBUF" ]; then
+	sed -i 's/START=.*/START=86/g' $NSS_PBUF
+
+	cd $PKG_PATH && echo "qca-nss-pbuf has been fixed!"
 fi
 
 #移除Shadowsocks组件
@@ -57,4 +89,12 @@ if [ -f "$TS_FILE" ]; then
 	sed -i '/\/files/d' $TS_FILE
 
 	cd $PKG_PATH && echo "tailscale has been fixed!"
+fi
+
+#修复Coremark编译失败
+CM_FILE=$(find ../feeds/packages/ -maxdepth 3 -type f -wholename "*/coremark/Makefile")
+if [ -f "$CM_FILE" ]; then
+	sed -i 's/mkdir/mkdir -p/g' $CM_FILE
+
+	cd $PKG_PATH && echo "coremark has been fixed!"
 fi
