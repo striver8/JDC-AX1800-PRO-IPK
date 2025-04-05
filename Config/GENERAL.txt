@@ -85,7 +85,7 @@ CONFIG_PACKAGE_luci-lua-runtime=y
 CONFIG_PACKAGE_luci-proto-bonding=y
 CONFIG_PACKAGE_luci-proto-relay=y
 
-#以下自行增加的插件及组件
+#-----------------以下自行增加的插件及组件-----------------#
 #zram-swap内存压缩
 CONFIG_PACKAGE_kmod-zram=y
 CONFIG_PACKAGE_zram-swap=y
@@ -162,19 +162,19 @@ CONFIG_PACKAGE_luci-app-argon-config=y
 CONFIG_PACKAGE_luci-app-socat=y
 #磁盘管理-diskman
 CONFIG_PACKAGE_luci-app-diskman=y
-#以上为自行增加的插件及组件
+#-----------以上为自行增加的插件及组件-------------#
 
 #-------------------以上为自行增加的插件及组件--------------------------------------#
 #*********************(^)***(^)***(^)***(^)***(^)**********************************#
 #-------------------2025.04.04-测试------------------------------------------------#
 CONFIG_PACKAGE_libpcre2=y
 CONFIG_PACKAGE_luci-app-store=y
-#CONFIG_PACKAGE_luci-app-vlmcsd=y
-#CONFIG_PACKAGE_luci-app-aliyundrive-webdav=y
+#CONFIG_PACKAGE_luci-app-vlmcsd=y-----自定义源也会编译失败
+#CONFIG_PACKAGE_luci-app-aliyundrive-webdav=y------在前面自定义源编译成功
 CONFIG_PACKAGE_luci-app-clouddrive2=y
 CONFIG_PACKAGE_luci-app-sunpanel=y
-#CONFIG_PACKAGE_luci-app-openvpn-server=y
-#CONFIG_PACKAGE_luci-app-socat=y
+#CONFIG_PACKAGE_luci-app-openvpn-server=y-----在前面官方源成功
+#CONFIG_PACKAGE_luci-app-socat=y-----在前面官方源成功
 CONFIG_PACKAGE_luci-app-istoreenhance=y
 CONFIG_PACKAGE_luci-app-linkease=y
 CONFIG_PACKAGE_luci-app-memos=y
