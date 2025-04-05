@@ -13,7 +13,8 @@ CONFIG_TARGET_DEVICE_qualcommax_ipq60xx_DEVICE_jdcloud_re-cs-02=y
 #CONFIG_TARGET_DEVICE_qualcommax_ipq60xx_DEVICE_redmi_ax5=y
 #CONFIG_TARGET_DEVICE_qualcommax_ipq60xx_DEVICE_xiaomi_ax1800=y
 #CONFIG_TARGET_DEVICE_qualcommax_ipq60xx_DEVICE_zn_m2=y
-#以下自编译插入插件
+
+#---------------以下自编译插入插件及组件----------------#
 #全能推送PushBot
 #CONFIG_PACKAGE_luci-app-pushbot=y
 #关机poweroff
@@ -30,4 +31,4 @@ CONFIG_TARGET_DEVICE_qualcommax_ipq60xx_DEVICE_jdcloud_re-cs-02=y
 #CONFIG_PACKAGE_luci-app-dockerman=y
 #openvpn
 #CONFIG_PACKAGE_luci-app-openvpn-server=y
-#以上为自行增加的插件及组件
+#---------------以上为自行增加的插件及组件----------------#
