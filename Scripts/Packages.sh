@@ -108,15 +108,15 @@ UPDATE_PACKAGE "luci-theme-design" "emxiong/luci-theme-design" "master"
 #luci-app-design-config主题配置
 UPDATE_PACKAGE "luci-app-design-config" "kenzok78/luci-app-design-config" "main"
 #luci-app-quickstart
-UPDATE_PACKAGE "luci-app-quickstart" "animegasan/luci-app-quickstart" "main"
+#UPDATE_PACKAGE "luci-app-quickstart" "animegasan/luci-app-quickstart" "main"
 #以上自定义源
 
 #-------------------------------------2025.04.04测试---------------------------------------#
 # 关键修改：使用 pkg 模式逐个提取需要的包，避免引入整个仓库
-UPDATE_PACKAGE "luci-lib-xterm" "kenzok8/small-package" "main" "pkg"
-UPDATE_PACKAGE "taskd" "kenzok8/small-package" "main" "pkg"
-UPDATE_PACKAGE "luci-lib-taskd" "kenzok8/small-package" "main" "pkg"
-UPDATE_PACKAGE "luci-app-store" "kenzok8/small-package" "main" "pkg"
+#UPDATE_PACKAGE "luci-lib-xterm" "kenzok8/small-package" "main" "pkg"
+#UPDATE_PACKAGE "taskd" "kenzok8/small-package" "main" "pkg"
+#UPDATE_PACKAGE "luci-lib-taskd" "kenzok8/small-package" "main" "pkg"
+#UPDATE_PACKAGE "luci-app-store" "kenzok8/small-package" "main" "pkg"
 
 #UPDATE_PACKAGE "vlmcsd" "kenzok8/small-package" "main" "pkg"
 #UPDATE_PACKAGE "luci-app-vlmcsd" "kenzok8/small-package" "main" "pkg"
@@ -124,28 +124,28 @@ UPDATE_PACKAGE "luci-app-store" "kenzok8/small-package" "main" "pkg"
 #UPDATE_PACKAGE "aliyundrive-webdav" "kenzok8/small-package" "main" "pkg"
 #UPDATE_PACKAGE "luci-app-aliyundrive-webdav" "kenzok8/small-package" "main" "pkg"
 
-UPDATE_PACKAGE "clouddrive2" "kenzok8/small-package" "main" "pkg"
-UPDATE_PACKAGE "luci-app-clouddrive2" "kenzok8/small-package" "main" "pkg"
+#UPDATE_PACKAGE "clouddrive2" "kenzok8/small-package" "main" "pkg"
+#UPDATE_PACKAGE "luci-app-clouddrive2" "kenzok8/small-package" "main" "pkg"
 
-UPDATE_PACKAGE "sunpanel" "kenzok8/small-package" "main" "pkg"
-UPDATE_PACKAGE "luci-app-sunpanel" "kenzok8/small-package" "main" "pkg"
+#UPDATE_PACKAGE "sunpanel" "kenzok8/small-package" "main" "pkg"
+#UPDATE_PACKAGE "luci-app-sunpanel" "kenzok8/small-package" "main" "pkg"
 
 #UPDATE_PACKAGE "luci-app-openvpn-server" "kenzok8/small-package" "main" "pkg"
 
 #UPDATE_PACKAGE "luci-app-socat" "kenzok8/small-package" "main" "pkg"
 
-UPDATE_PACKAGE "istoreenhance" "kenzok8/small-package" "main" "pkg"
-UPDATE_PACKAGE "luci-app-istoreenhance" "kenzok8/small-package" "main" "pkg"
+#UPDATE_PACKAGE "istoreenhance" "kenzok8/small-package" "main" "pkg"
+#UPDATE_PACKAGE "luci-app-istoreenhance" "kenzok8/small-package" "main" "pkg"
 
-UPDATE_PACKAGE "linkmount" "kenzok8/small-package" "main" "pkg"
-UPDATE_PACKAGE "linkease" "kenzok8/small-package" "main" "pkg"
-UPDATE_PACKAGE "luci-app-linkease" "kenzok8/small-package" "main" "pkg"
+#UPDATE_PACKAGE "linkmount" "kenzok8/small-package" "main" "pkg"
+#UPDATE_PACKAGE "linkease" "kenzok8/small-package" "main" "pkg"
+#UPDATE_PACKAGE "luci-app-linkease" "kenzok8/small-package" "main" "pkg"
 
-UPDATE_PACKAGE "luci-app-memos" "kenzok8/small-package" "main" "pkg"
+#UPDATE_PACKAGE "luci-app-memos" "kenzok8/small-package" "main" "pkg"
 
 #UPDATE_PACKAGE "luci-app-navidrome" "kenzok8/small-package" "main" "pkg"
 
-UPDATE_PACKAGE "quickstart" "kenzok8/small-package" "main" "pkg"
+#UPDATE_PACKAGE "quickstart" "kenzok8/small-package" "main" "pkg"
 #UPDATE_PACKAGE "luci-app-quickstart" "kenzok8/small-package" "main" "pkg"
 
 #UPDATE_PACKAGE "luci-theme-design" "kenzok8/small-package" "main" "pkg"
