@@ -145,7 +145,7 @@ UPDATE_PACKAGE "luci-app-memos" "kenzok8/small-package" "main" "pkg"
 
 #UPDATE_PACKAGE "luci-app-navidrome" "kenzok8/small-package" "main" "pkg"
 
-#UPDATE_PACKAGE "quickstart" "kenzok8/small-package" "main" "pkg"
+UPDATE_PACKAGE "quickstart" "kenzok8/small-package" "main" "pkg"
 #UPDATE_PACKAGE "luci-app-quickstart" "kenzok8/small-package" "main" "pkg"
 
 #UPDATE_PACKAGE "luci-theme-design" "kenzok8/small-package" "main" "pkg"
