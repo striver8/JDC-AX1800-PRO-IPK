@@ -101,6 +101,14 @@ UPDATE_PACKAGE "luci-app-aliyundrive-webdav" "messense/aliyundrive-webdav" "main
 #服务器
 #UPDATE_PACKAGE "luci-app-openvpn-server" "hyperlook/luci-app-openvpn-server" "main"
 #UPDATE_PACKAGE "luci-app-openvpn-server" "ixiaan/luci-app-openvpn-server" "main"
+#luci-app-navidrome音乐服务器
+UPDATE_PACKAGE "luci-app-navidrome" "tty228/luci-app-navidrome" "main"
+#luci-theme-design主题界面
+UPDATE_PACKAGE "luci-theme-design" "emxiong/luci-theme-design" "master"
+#luci-app-design-config主题配置
+UPDATE_PACKAGE "luci-app-design-config" "kenzok78/luci-app-design-config" "main"
+#luci-app-quickstart
+UPDATE_PACKAGE "luci-app-quickstart" "animegasan/luci-app-quickstart" "main"
 #以上自定义源
 
 #-------------------------------------2025.04.04测试---------------------------------------#
@@ -113,8 +121,8 @@ UPDATE_PACKAGE "luci-app-store" "kiddin9/kwrt-packages" "main" "pkg"
 #UPDATE_PACKAGE "vlmcsd" "kiddin9/kwrt-packages" "main" "pkg"
 #UPDATE_PACKAGE "luci-app-vlmcsd" "kiddin9/kwrt-packages" "main" "pkg"
 
-UPDATE_PACKAGE "aliyundrive-webdav" "kiddin9/kwrt-packages" "main" "pkg"
-UPDATE_PACKAGE "luci-app-aliyundrive-webdav" "kiddin9/kwrt-packages" "main" "pkg"
+#UPDATE_PACKAGE "aliyundrive-webdav" "kiddin9/kwrt-packages" "main" "pkg"
+#UPDATE_PACKAGE "luci-app-aliyundrive-webdav" "kiddin9/kwrt-packages" "main" "pkg"
 
 UPDATE_PACKAGE "clouddrive2" "kiddin9/kwrt-packages" "main" "pkg"
 UPDATE_PACKAGE "luci-app-clouddrive2" "kiddin9/kwrt-packages" "main" "pkg"
@@ -135,12 +143,12 @@ UPDATE_PACKAGE "luci-app-linkease" "kiddin9/kwrt-packages" "main" "pkg"
 
 UPDATE_PACKAGE "luci-app-memos" "kiddin9/kwrt-packages" "main" "pkg"
 
-UPDATE_PACKAGE "luci-app-navidrome" "kiddin9/kwrt-packages" "main" "pkg"
+#UPDATE_PACKAGE "luci-app-navidrome" "kiddin9/kwrt-packages" "main" "pkg"
 
-UPDATE_PACKAGE "quickstart" "kiddin9/kwrt-packages" "main" "pkg"
-UPDATE_PACKAGE "luci-app-quickstart" "kiddin9/kwrt-packages" "main" "pkg"
+#UPDATE_PACKAGE "quickstart" "kiddin9/kwrt-packages" "main" "pkg"
+#UPDATE_PACKAGE "luci-app-quickstart" "kiddin9/kwrt-packages" "main" "pkg"
 
-UPDATE_PACKAGE "luci-theme-design" "kiddin9/kwrt-packages" "main" "pkg"
-UPDATE_PACKAGE "luci-app-design-config" "kiddin9/kwrt-packages" "main" "pkg"
+#UPDATE_PACKAGE "luci-theme-design" "kiddin9/kwrt-packages" "main" "pkg"
+#UPDATE_PACKAGE "luci-app-design-config" "kiddin9/kwrt-packages" "main" "pkg"
 
 #-------------------------------------2025.04.04测试---------------------------------------#
